@@ -346,6 +346,16 @@
       ],
     },
     {
+      'target_name': 'prodcon-hackathonq',
+      'type': 'executable',
+      'libraries': [ '<@(default_libraries)' ],
+      'dependencies': [
+        'libscal',
+        'prodcon-base',
+        'glue.gyp:hackathonq',
+      ],
+    },
+    {
       'target_name': 'seqalt-lcrq',
       'type': 'executable',
       'libraries': [ '<@(default_libraries)' ],

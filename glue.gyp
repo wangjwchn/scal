@@ -193,6 +193,14 @@
       ],
     },
     {
+      'target_name': 'hackathonq',
+      'type': 'static_library',
+      'cflags': [ ],
+      'sources': [
+        'src/benchmark/std_glue/glue_hackathonq.cc'
+      ],
+    },
+    {
       'target_name': 'lb-stack',
       'type': 'static_library',
       'sources': [

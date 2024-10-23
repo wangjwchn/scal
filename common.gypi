@@ -2,7 +2,7 @@
   'variables': {
     'default_cflags' : [
       '-Wall',
-      '-Werror',
+      # '-Werror',
       '-ftls-model=initial-exec',
       '-m64',
       '-mcx16',
@@ -46,6 +46,7 @@
             'src',
             '/usr/include',
             '/usr/local/include',
+            '..',
           ]
         },
         'Release': {
@@ -63,6 +64,7 @@
             'src',
             '/usr/include',
             '/usr/local/include',
+            '..',
           ]
         },
       },

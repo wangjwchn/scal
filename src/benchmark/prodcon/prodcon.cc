@@ -119,18 +119,12 @@ int main(int argc, const char **argv) {
     }
 
     char buffer[1024] = {0};
-    uint32_t n = snprintf(buffer, sizeof(buffer), "{\"threads\": %" PRIu64 " ,\"producers\": %" PRIu64 " ,\"consumers\": %" PRIu64 " ,\"runtime\": %" PRIu64 " ,\"operations\": %" PRIu64 " ,\"c\": %" PRIu64 " ,\"throughput\": %" PRIu64 "",
-        g_num_threads,
-        FLAGS_producers,
-        FLAGS_consumers,
-        exec_time,
-        FLAGS_operations,
-        FLAGS_c,
-        (uint64_t)(num_operations / (static_cast<double>(exec_time) / 1000)));
+    uint32_t n = snprintf(buffer, sizeof(buffer), "%" PRIu64, (uint64_t)(num_operations / (static_cast<double>(exec_time) / 1000000)));
     if (n != strlen(buffer)) {
       fprintf(stderr, "%s: error: failed to create summary string\n", __func__);
       abort();
     }
+
     char *ds_stats = ds_get_stats();
     if (ds_stats != NULL) {
       if (n + strlen(ds_stats) >= 1023) {  // separating space + '\0'

@@ -97,9 +97,9 @@ bool Benchmark::can_modify_sched() {
                      NULL);
   if (s != 0) {
     if (s == EPERM) {
-      fprintf(stderr, "warning: unable to modify scheduler policy and "
-                      "priority for worker threads. consider running "
-                      "the benchmark with sufficient priviliges.\n");
+      // fprintf(stderr, "warning: unable to modify scheduler policy and "
+      //                 "priority for worker threads. consider running "
+      //                 "the benchmark with sufficient priviliges.\n");
       return false;
     } else {
       handle_pthread_error(s, "pthread_create");
