@@ -18,14 +18,15 @@ WHERE_IS_BINS = "./out/Release/"
 HOW_TO_COMPILE = "V=1 BUILDTYPE=Release make -j"
 
 BENCHMARKS = {
-    'HACKATHONQ':'prodcon-hackathonq',                # Queue, FIFO, bounded
+    'HACKATHONQ':'prodcon-hackathonq',  # Queue, K-FIFO, bounded
     'LCRQ':'prodcon-lcrq',              # Queue, FIFO, unbounded
+    'BSQ':'prodcon-bs-kfifo'            # Queue, K-FIFO, bounded
 }
 
 
 def execute(cmd, show=False):
-    # print(cmd)
-    # show = True
+    print(cmd)
+    show = True
     os.system(f"{cmd} {''if show else ' > /dev/null 2>&1'}")
     pass
 
