@@ -201,6 +201,14 @@
       ],
     },
     {
+      'target_name': 'dpdk',
+      'type': 'static_library',
+      'cflags': [ ],
+      'sources': [
+        'src/benchmark/std_glue/glue_dpdk.cc'
+      ],
+    },
+    {
       'target_name': 'lb-stack',
       'type': 'static_library',
       'sources': [

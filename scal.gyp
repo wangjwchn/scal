@@ -356,6 +356,16 @@
       ],
     },
     {
+      'target_name': 'prodcon-dpdk',
+      'type': 'executable',
+      'libraries': [ '<@(default_libraries)' ],
+      'dependencies': [
+        'libscal',
+        'prodcon-base',
+        'glue.gyp:dpdk',
+      ],
+    },
+    {
       'target_name': 'seqalt-lcrq',
       'type': 'executable',
       'libraries': [ '<@(default_libraries)' ],

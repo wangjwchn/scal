@@ -8,7 +8,7 @@
 #include "datastructures/boundedsize_kfifo.h"
 
 DEFINE_uint64(k, 80, "k-segment size");
-DEFINE_uint64(num_segments, 100000, "number of k-segments in the "
+DEFINE_uint64(num_segments, 10000, "number of k-segments in the "
                                      "bounded-size version");
 
 void* ds_new() {
