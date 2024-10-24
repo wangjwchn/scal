@@ -32,7 +32,7 @@ def run_multi(workload_id, wr_pair):
                     bin_file = os.path.join(WHERE_IS_BINS, BENCHMARKS[bench_id])
                     print(f"{bench_id},{workload_id},{n_writer},{n_reader},{contention},",end='')
                     sys.stdout.flush()
-                    operations = ITERATIONS // (n_writer + n_reader)
+                    operations = ITERATIONS // (n_writer + n_reader) // (1 if contention==0 else 100)
                     execute(f"{bin_file} -producers={n_writer} -consumers={n_reader} -operations={operations} -c={contention} -prealloc_size=100m", True)
 
 L = list(range(2, MAX_CORES))
