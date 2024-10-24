@@ -13,8 +13,8 @@
 //
 // Website: http://mcg.cs.tau.ac.il/projects/lcrq/, accesed 01/28/2015
 
-#ifndef SCAL_DATASTRUCTURES_BBQ_H_
-#define SCAL_DATASTRUCTURES_BBQ_H_
+#ifndef SCAL_DATASTRUCTURES_HACKQ_H_
+#define SCAL_DATASTRUCTURES_HACKQ_H_
 
 #include "datastructures/queue.h"
 #include "datastructures/hackathonq.h"
