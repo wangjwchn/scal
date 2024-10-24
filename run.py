@@ -39,7 +39,7 @@ def run_multi(workload_id, wr_pair):
                     sys.stdout.flush()
                     operations = ITERATIONS // (n_writer + n_reader)
                     execute(f"{bin_file} -producers={n_writer} -consumers={n_reader} -operations={operations} -c={contention} -prealloc_size=100m", True)
-                    
+
 L = list(range(2, MAX_CORES))
 I = [1] * len(L)
 
